@@ -34,8 +34,8 @@ A machine learning-based web application that predicts the likelihood of earthqu
 
 ## 👥 Team
 
-1. Ramsagar Gupta
-2. Vimlesh Kumar
+1. Ramsagar Gupta  ---> https://github.com/Ramsagar-Gupta26
+3. Vimlesh Kumar   ---> https://github.com/Vimlesh-Kumar86
 
 ---
 
