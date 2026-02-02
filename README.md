@@ -32,6 +32,13 @@ A machine learning-based web application that predicts the likelihood of earthqu
 
 ---
 
+## 👥 Team
+
+1. Ramsagar Gupta
+2. Vimlesh Kumar
+
+---
+
 ## 🚀 How to Run Locally
 
 1. Clone the repo:
