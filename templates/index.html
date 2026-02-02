@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Earthquake Prediction</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet'>
+  <style>
+    body {
+      font-family: 'Arimo', sans-serif;
+      background-color: #f7f7f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .login {
+      background: #fff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .login h1 {
+      font-family: 'Pacifico', cursive;
+      margin-bottom: 20px;
+    }
+    .login input {
+      width: 80%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .login button {
+      width: 80%;
+      padding: 10px;
+      background: #28a745;
+      border: none;
+      border-radius: 4px;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .login button:hover {
+      background: #218838;
+    }
+    .login .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="login">
+    <h1>Earthquake Prediction</h1>
+    <form action="{{ url_for('predict') }}" method="post">
+      <input type="text" name="depth" placeholder="Depth" required>
+      <input type="text" name="latitude" placeholder="Latitude" required>
+      <input type="text" name="longitude" placeholder="Longitude" required>
+      <input type="text" name="time" placeholder="Time (YYYY-MM-DD HH:MM:SS)" required>
+      <button type="submit">Predict</button>
+    </form>
+    <div class="result">{{ prediction_text }}</div>
+  </div>
+</body>
+</html>
